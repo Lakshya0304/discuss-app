@@ -14,7 +14,7 @@ const CommentList : React.FC<CommentListProps> = async({postId}) => {
 
   return(
     <div>
-        <h1 className='font-semibold text-lg'>All 0 comments</h1>
+        <h1 className='font-semibold text-lg'>All comments</h1>
         {
             topLevelComments.map( (comment) => (
                 <CommentShow key={comment.id} postId={postId} commentId={comment.id} />

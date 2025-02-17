@@ -7,7 +7,7 @@ import { search } from '@/actions/search';
 const SearchHeader = () => {
     const searchParams = useSearchParams();
   return (
-    <div>
+    <div className='w-2/3'>
         <form action={search}>
             <Input defaultValue={searchParams.get("term") || ""} type="text" name='term' placeholder="Search Post..."></Input>
         </form>
