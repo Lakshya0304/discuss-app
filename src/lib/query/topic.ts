@@ -1,4 +1,3 @@
-import { Topic } from "@prisma/client";
 import { prisma } from ".."
 import { cache } from "react";
 

@@ -3,7 +3,6 @@ import {z} from "zod"
 import { auth } from "@/auth";
 import { prisma } from "@/lib";
 import { revalidatePath } from "next/cache";
-import { error } from "console";
 
 const CreateCommentSchema = z.object({
     content : z.string().min(3)

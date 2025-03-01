@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react'
-import { Input } from './ui/input'
 import { AuthHeader } from './authHeader';
 import SearchHeader from './searchHeader';
 import Link from 'next/link';

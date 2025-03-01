@@ -1,4 +1,3 @@
-import PostList from "@/components/posts/postList";
 import { CreateNewTopicForm } from "@/components/topics/createNewTopicForm";
 import TopicsList from "@/components/topics/TopicList";
 import { Suspense } from "react";
