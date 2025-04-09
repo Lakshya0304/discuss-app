@@ -17,7 +17,8 @@ const TopicShowPage: React.FC<TopicShowPageProps> = async({params}) => {
         <div className="col-span-3">
           <Link href={`/`}>
             <Button variant={"link"}>
-              <ChevronLeft /> <h1 className="font-bold p-4 text-2xl">{slug}</h1>
+              <ChevronLeft className="text-white w-6 h-6 hover:scale-110 transition-transform duration-200" />{" "}
+              <h1 className="font-bold p-4 text-2xl text-amber-50">{slug}</h1>
             </Button>
           </Link>
           {/* <h1 className="font-bold p-4 text-2xl">{slug}</h1> */}

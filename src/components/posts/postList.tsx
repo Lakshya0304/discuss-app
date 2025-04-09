@@ -13,13 +13,22 @@ const PostList : React.FC<PostListProps> = async({fetchData}) => {
   return (
     <div className=" flex flex-col gap-2">
       {posts.map((post) => (
-        <Link key={post.id} href={`/topics/${post.topic.slug}/posts/${post.id}`}>
-          <Card>
+        <Link
+          key={post.id}
+          href={`/topics/${post.topic.slug}/posts/${post.id}`}
+        >
+          <Card className="bg-gradient-to-br from-[#fdfbfb] to-[#ebedee] shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-2xl border border-gray-200 m-5">
             <CardHeader>
-              <CardTitle>{post.title}</CardTitle>
-              <CardDescription className="flex items-center justify-between">
-                <h1>By {post.user.name}</h1>
-                <h1> {post._count.comments} comments</h1>
+              <CardTitle className="text-xl font-bold text-slate-800 tracking-tight">
+                {post.title}
+              </CardTitle>
+              <CardDescription className="flex items-center justify-between text-sm text-slate-600 mt-2">
+                <span className="flex items-center gap-1 text-blue-700 font-medium">
+                  ✍️ By {post.user.name}
+                </span>
+                <span className="flex items-center gap-1 text-pink-600 font-medium">
+                  💬 {post._count.comments} comments
+                </span>
               </CardDescription>
             </CardHeader>
           </Card>

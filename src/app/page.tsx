@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 export default function Home() {
     return (
-      <div className="grid grid-cols-4 gap-4 p-4">
+      <div className="grid grid-cols-4 gap-4 p-4 ">
         <div className="col-span-3">
           <h1 className="font-bold text-2xl mb-5">All Topics</h1>
           {/* <PostList fetchData={fetchTopPosts}/> */}
@@ -16,5 +16,6 @@ export default function Home() {
           <CreateNewTopicForm />
         </div>
       </div>
+      
     );
 }

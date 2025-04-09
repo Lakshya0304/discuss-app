@@ -27,13 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white min-h-screen`}
       >
         <div className="container m-auto max-w-7xl">
-            <SessionProvider>
-                <HeaderPage />
-                {children}
-            </SessionProvider>
+          <SessionProvider>
+            <HeaderPage />
+            {children}
+          </SessionProvider>
         </div>
       </body>
     </html>

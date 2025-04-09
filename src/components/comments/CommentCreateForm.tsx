@@ -18,7 +18,7 @@ const CommentCreateForm : React.FC<CommentCreateFormProps> = ({postId,parentId,s
     
   return (
     <div>
-      <Button size={"sm"} variant={"link"} onClick={() => setOpen(!open)}>
+      <Button className='text-white' size={"sm"} variant={"link"} onClick={() => setOpen(!open)}>
         Reply
       </Button>
       {open && (
@@ -26,7 +26,7 @@ const CommentCreateForm : React.FC<CommentCreateFormProps> = ({postId,parentId,s
           <Textarea
             name="content"
             placeholder="Write your comment..."
-            className="bg-gray-100 focus-visible:ring-0 my-2"
+            className="bg-gray-100 text-black focus-visible:ring-0 my-2"
           />
           {formState.errors.content && (
             <p className="text-red-600 text-sm">{formState.errors.content}</p>

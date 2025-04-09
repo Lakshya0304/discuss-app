@@ -15,15 +15,16 @@ const PostShowPage : React.FC<PostShowPageProps>= async({params}) => {
     return (
       <div className="space-y-3">
         <Link href={`/topics/${slug}`}>
-          <Button variant={"link"}>
-            <ChevronLeft /> Back to {slug.toUpperCase()}
+          <Button variant={"link"} className="text-amber-50">
+            <ChevronLeft className="text-white w-6 h-6 hover:scale-110 transition-transform duration-200" />
+            Back to {slug.toUpperCase()}
           </Button>
         </Link>
-        <Suspense fallback= { <p> LOADING... </p>}>
-            <PostShow postId={postId} />
+        <Suspense fallback={<p> LOADING... </p>}>
+          <PostShow postId={postId} />
         </Suspense>
-        <CommentCreateForm postId={postId} startOpen/>
-        <CommentList postId = {postId}/>
+        <CommentCreateForm postId={postId} startOpen />
+        <CommentList postId={postId} />
       </div>
     );
 };
